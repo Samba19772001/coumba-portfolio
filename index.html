@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Coumba Ndiaye, communicante institutionnelle et digitale et fondatrice de Lady Coumba Agency. Découvrez ses réalisations : COMIAC, Jeunes Diplomates Africains, ENDA Jeunesse Action, Juldé Cosmétique, Evvoli Sénégal.">
+
+    <meta name="theme-color" content="#f8f4ed">
+
+    <title>Coumba Ndiaye | Communication & stratégie</title>
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+    <!-- Aperçu lors du partage du lien (WhatsApp, LinkedIn...) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Coumba Ndiaye | Communication & stratégie">
+    <meta property="og:description"
+        content="Communicante institutionnelle et digitale, fondatrice de Lady Coumba Agency. Découvrez mes réalisations.">
+    <!-- À compléter quand l'adresse du site est connue (le lien doit être complet, en https) :
+    <meta property="og:image" content="https://ADRESSE-DU-SITE/assets/image/og-cover.jpg">
+    <meta property="og:url" content="https://ADRESSE-DU-SITE/">
+    -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="loader" id="loader">
+        <span>CN</span>
+    </div>
+
+    <header class="header">
+        <a href="index.html" class="logo" aria-label="Accueil Coumba Ndiaye">
+            <span class="logo-mark">CN</span>
+            <span class="logo-text">
+                <strong>Coumba Ndiaye</strong>
+                <small>Communication & stratégie</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false"
+            aria-controls="navigation">
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="navigation" id="navigation">
+            <a href="index.html" class="active">Accueil</a>
+            <a href="pages/apropos.html">À propos</a>
+            <a href="pages/realisations.html">Réalisations</a>
+            <a href="pages/contact.html" class="nav-cta">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO : PRESENTATION DE COUMBA -->
+
+        <section class="hero section-padding">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    COMMUNICATION · STRATÉGIE · CRÉATIVITÉ
+                </p>
+
+                <h1>
+                    Donner du sens<br>
+                    aux messages.<br>
+                    <span>Créer de l'impact.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Je suis Coumba Ndiaye, communicante institutionnelle et
+                    digitale, fondatrice de Lady Coumba Agency. J'ai piloté en
+                    autonomie la communication d'un événement diplomatique pour
+                    la COMIAC, animé les réseaux sociaux de deux marques et
+                    présidé une amicale étudiante.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="pages/realisations.html" class="btn btn-primary">
+                        Voir mes réalisations
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                    <a href="pages/contact.html" class="btn btn-secondary">
+                        Me contacter
+                    </a>
+
+                </div>
+
+                <div class="hero-signature">
+                    <a href="assets/documents/cv.pdf" class="text-link" target="_blank" rel="noopener noreferrer">
+                        Télécharger mon CV <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-visual">
+
+                <div class="hero-frame">
+
+                    <img src="./assets/image/portrait-coumba.webp" alt="Portrait de Coumba Ndiaye" class="hero-portrait"
+                        fetchpriority="high"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+                    <div class="portrait-placeholder">
+                        <span>CN</span>
+                        <p>Portrait de Coumba Ndiaye</p>
+                        <small>Ajouter la photo dans assets/image/</small>
+                    </div>
+
+                </div>
+
+                <div class="floating-card">
+                    <span class="floating-icon">✳</span>
+                    <div>
+                        <strong>Lady Coumba Agency</strong>
+                        <p>Fondatrice et directrice</p>
+                    </div>
+                </div>
+
+                <div class="hero-decoration decoration-one"></div>
+                <div class="hero-decoration decoration-two"></div>
+
+            </div>
+
+        </section>
+
+        <!-- EXPERIENCES : STRUCTURES -->
+
+        <section class="proof-strip" aria-labelledby="proof-title">
+            <div class="proof-strip-inner">
+                <p class="proof-title" id="proof-title">EXPÉRIENCES AUPRÈS DE</p>
+
+                <ul class="proof-list">
+                    <li><a href="pages/realisations.html#comiac">COMIAC</a></li>
+                    <li><a href="pages/realisations.html#jda">Jeunes Diplomates Africains</a></li>
+                    <li><a href="pages/realisations.html#enda">ENDA Jeunesse Action</a></li>
+                    <li><a href="pages/realisations.html#digital">Juldé Cosmétique</a></li>
+                    <li><a href="pages/realisations.html#digital">Evvoli Sénégal</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- COMPETENCES ET APPROCHE PERSONNELLE -->
+
+        <section class="services section-padding">
+
+            <div class="services-header">
+
+                <div>
+                    <p class="eyebrow">MON APPROCHE</p>
+                    <h2>
+                        De la réflexion<br>
+                        <span>à la mise en œuvre.</span>
+                    </h2>
+                </div>
+
+                <p class="services-intro">
+                    Chaque projet commence par deux questions : à qui parle-t-on,
+                    et pour dire quoi ? Les messages, les supports et les canaux
+                    en découlent.
+                </p>
+
+            </div>
+
+            <div class="services-grid">
+
+                <article class="service-card">
+
+                    <div class="service-icon">↗</div>
+
+                    <h3>Réflexion stratégique</h3>
+
+                    <p>
+                        Diagnostic de communication, définition des publics
+                        et des messages, plan de communication opérationnel.
+                    </p>
+                </article>
+
+                <article class="service-card">
+
+                    <div class="service-icon">✳</div>
+
+                    <h3>Création de contenu</h3>
+
+                    <p>
+                        Communiqués, publications et discours institutionnels,
+                        supports visuels conçus sur Canva : affiches,
+                        présentations, visuels de marque.
+                    </p>
+                </article>
+
+                <article class="service-card">
+
+                    <div class="service-icon">▤</div>
+
+                    <h3>Communication digitale</h3>
+
+                    <p>
+                        Stratégie de contenu, calendrier éditorial et animation
+                        de Facebook, Instagram et TikTok pour des marques.
+                    </p>
+                </article>
+
+                <article class="service-card">
+
+                    <div class="service-icon">◇</div>
+
+                    <h3>Communication institutionnelle</h3>
+
+                    <p>
+                        Communication d'événements à dimension diplomatique :
+                        termes de référence, plan de communication, supports
+                        et coordination.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- EXPERIENCES ET REALISATIONS -->
+
+        <section class="projects section-padding">
+
+            <div class="projects-header">
+
+                <div>
+                    <p class="eyebrow">MON PARCOURS EN ACTION</p>
+
+                    <h2>
+                        Des expériences qui<br>
+                        <span>nourrissent ma pratique.</span>
+                    </h2>
+                </div>
+
+                <a href="pages/realisations.html" class="text-link">
+                    Toutes mes réalisations <span>→</span>
+                </a>
+
+            </div>
+
+            <div class="projects-grid">
+
+                <a href="pages/realisations.html#comiac" class="project-card project-large">
+
+                    <div class="project-image project-image-comiac project-image-banners">
+
+                        <img src="assets/image/comiac-kakemono-presentation.webp"
+                            alt="Kakémono de présentation de la COMIAC" loading="lazy"
+                            onerror="this.style.display='none'">
+
+                        <img src="assets/image/comiac-kakemono-commemoration.webp"
+                            alt="Kakémono de la Journée de commémoration Ceerno Sileymane Baal" loading="lazy"
+                            onerror="this.style.display='none'">
+
+                        <span class="project-category">
+                            Communication institutionnelle
+                        </span>
+
+                    </div>
+
+                    <div class="project-info">
+
+                        <div>
+                            <h3>COMIAC</h3>
+
+                            <p>
+                                Pilotage de la communication du 250e anniversaire
+                                de la Révolution Torodo : diagnostic, plan,
+                                supports et coordination.
+                            </p>
+                        </div>
+
+                        <span class="project-arrow">↗</span>
+
+                    </div>
+
+                </a>
+
+                <a href="pages/realisations.html#jda" class="project-card">
+
+                    <div class="project-image project-image-jda">
+
+                        <img src="assets/image/jda.webp" alt="Séance de conférence des Jeunes Diplomates Africains"
+                            loading="lazy" onerror="this.style.display='none'">
+
+                        <span class="project-category">
+                            Engagement & communication
+                        </span>
+
+                    </div>
+
+                    <div class="project-info">
+
+                        <div>
+                            <h3>Jeunes Diplomates Africains</h3>
+
+                            <p>
+                                Supports du JDMUN, contenus digitaux et
+                                discours institutionnels.
+                            </p>
+                        </div>
+
+                        <span class="project-arrow">↗</span>
+
+                    </div>
+
+                </a>
+
+                <a href="pages/realisations.html#digital" class="project-card">
+
+                    <div class="project-image project-image-digital">
+
+                        <img src="assets/image/julde.webp" alt="Visuel de communication pour Juldé Cosmétique"
+                            loading="lazy" onerror="this.style.display='none'">
+
+                        <span class="project-category">
+                            Communication digitale
+                        </span>
+
+                    </div>
+
+                    <div class="project-info">
+
+                        <div>
+                            <h3>Community management</h3>
+
+                            <p>
+                                Calendriers éditoriaux et animation des réseaux
+                                de Juldé Cosmétique et d'Evvoli Sénégal.
+                            </p>
+                        </div>
+
+                        <span class="project-arrow">↗</span>
+
+                    </div>
+
+                </a>
+
+                <a href="pages/realisations.html#video" class="project-card">
+
+                    <div class="project-image project-image-video">
+
+                        <img src="assets/image/vlog-saint-louis-poster.webp"
+                            alt="Image de couverture du vlog consacré à Saint-Louis" loading="lazy"
+                            onerror="this.style.display='none'">
+
+                        <span class="project-category">
+                            Contenu vidéo
+                        </span>
+
+                    </div>
+
+                    <div class="project-info">
+
+                        <div>
+                            <h3>Vidéo</h3>
+
+                            <p>
+                                Vlog, séances de sport, restaurant : des formats
+                                pour mettre un lieu en scène.
+                            </p>
+                        </div>
+
+                        <span class="project-arrow">↗</span>
+
+                    </div>
+
+                </a>
+
+                <a href="pages/realisations.html#photos" class="project-card">
+
+                    <div class="project-image project-image-photo">
+
+                        <img src="assets/image/photos/photo-1.webp" alt="Photographie prise par Coumba Ndiaye"
+                            loading="lazy" onerror="this.style.display='none'">
+
+                        <span class="project-category">
+                            Photographie
+                        </span>
+
+                    </div>
+
+                    <div class="project-info">
+
+                        <div>
+                            <h3>Photographie</h3>
+
+                            <p>
+                                Une sélection de photos prises par mes soins.
+                            </p>
+                        </div>
+
+                        <span class="project-arrow">↗</span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- PROJET ENTREPRENEURIAL -->
+
+        <section class="agency-cta section-padding">
+
+            <div class="agency-cta-content">
+
+
+                <p class="eyebrow">LADY COUMBA AGENCY</p>
+
+                <h2>
+                    Une agence née<br>
+                    <span>d'une vision.</span>
+                </h2>
+
+                <p>
+                    J'ai fondé Lady Coumba Agency en octobre 2026 pour mettre
+                    ma vision de la communication au service des projets et des
+                    organisations. L'agence démarre : j'accueille volontiers
+                    de premiers projets.
+                </p>
+
+                <a href="pages/contact.html" class="btn btn-light">
+                    Prendre contact <span>↗</span>
+                </a>
+
+
+            </div>
+
+            <div class="cta-monogram" aria-hidden="true">LC</div>
+
+        </section>
+
+    </main>
+
+    <!-- PIED DE PAGE -->
+
+    <footer class="footer">
+
+        <a href="index.html" class="logo footer-logo">
+
+            <span class="logo-mark">CN</span>
+
+            <span class="logo-text">
+                <strong>Coumba Ndiaye</strong>
+                <small>Communication & stratégie</small>
+            </span>
+
+        </a>
+
+        <p>Communication institutionnelle & digitale</p>
+
+        <div class="footer-links">
+            <a href="pages/apropos.html">À propos</a>
+            <a href="pages/realisations.html">Réalisations</a>
+            <a href="pages/contact.html">Contact</a>
+        </div>
+
+        <p class="footer-copy">
+            © <span id="year"></span> Coumba Ndiaye. Tous droits réservés.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
