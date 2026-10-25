@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Réinitialiser le menu lorsque l'écran redevient large.
         window.addEventListener("resize", () => {
-            if (window.innerWidth > 760) {
+            if (window.innerWidth > 940) {
                 closeMenu();
             }
         });
@@ -192,6 +192,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         });
+    });
+
+
+    // 6 ter. VIDÉOS VERTICALES
+    // L'orientation est lue sur l'image de couverture : si elle est plus haute
+    // que large, la vidéo s'affiche au format vertical (9:16) sans bandes.
+    document.querySelectorAll(".video-card video[poster]").forEach((video) => {
+        const cover = new Image();
+
+        cover.addEventListener("load", () => {
+            if (cover.naturalHeight > cover.naturalWidth) {
+                video.closest(".video-card").classList.add("is-vertical");
+            }
+        });
+
+        cover.src = video.getAttribute("poster");
     });
 
 

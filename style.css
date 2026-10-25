@@ -2674,3 +2674,446 @@ button.media-frame.is-missing {
         right: -6px;
     }
 }
+
+
+/* =========================================
+   ALIGNEMENT SUR GRANDS ÉCRANS
+   En-tête, hero, sections et pied de page partagent la même marge gauche.
+========================================= */
+
+:root {
+    --gutter: max(var(--page-padding), calc((100% - var(--container)) / 2));
+}
+
+.header,
+.footer {
+    padding-right: var(--gutter);
+    padding-left: var(--gutter);
+}
+
+.hero {
+    max-width: none;
+    margin: 0;
+    padding-right: var(--gutter);
+    padding-left: var(--gutter);
+}
+
+.agency-cta {
+    padding-right: var(--gutter);
+    padding-left: var(--gutter);
+}
+
+/* =========================================
+   IMAGES ET VIDÉOS VERTICALES
+========================================= */
+
+/* Cartes de l'accueil : l'image s'affiche en entier, quelle que soit son
+   orientation, sur un fond flou issu de la même image. */
+
+.project-image-fit img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.project-image-fit .project-bg {
+    object-fit: cover;
+    filter: blur(22px) saturate(1.1);
+    transform: scale(1.25);
+}
+
+.project-image-fit .project-fit {
+    object-fit: contain;
+}
+
+.project-card:hover .project-image-fit .project-bg {
+    transform: scale(1.25);
+}
+
+.project-image-digital img,
+.project-image-digital .project-fit {
+    object-position: center;
+}
+
+.project-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    padding-left: 4px;
+    border-radius: 50%;
+    background: rgba(248, 244, 237, 0.94);
+    box-shadow: 0 8px 28px rgba(33, 11, 20, 0.28);
+    color: var(--burgundy);
+    font-size: 1.15rem;
+    transform: translate(-50%, -50%);
+    transition: transform var(--transition);
+}
+
+.project-card:hover .project-play {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+
+/* Page Réalisations : vidéos verticales */
+
+.video-stack {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    align-items: start;
+}
+
+.video-stack .logo-card {
+    grid-column: 1 / -1;
+}
+
+.video-card.is-vertical video {
+    aspect-ratio: 9 / 16;
+    max-height: none;
+}
+
+.video-grid .video-card.is-vertical {
+    width: 100%;
+    max-width: 340px;
+    margin-inline: auto;
+}
+
+@media (max-width: 760px) {
+    .video-stack {
+        grid-template-columns: 1fr;
+    }
+
+    .video-stack .video-card.is-vertical {
+        width: 100%;
+        max-width: 300px;
+        margin-inline: auto;
+    }
+}
+
+
+/* =========================================
+   PAGE DE L'AGENCE
+========================================= */
+
+/* Présentation : le logo est conçu sur fond noir, la bande reprend ce fond */
+
+.agency-hero {
+    padding: 64px var(--page-padding) 84px;
+    background: #000;
+    color: var(--cream);
+    text-align: center;
+}
+
+.agency-logo {
+    display: block;
+    width: min(500px, 80vw);
+    height: auto;
+    margin: 0 auto 28px;
+}
+
+.agency-hero h1 {
+    color: var(--cream);
+    font-size: clamp(1.7rem, 3.4vw, 2.8rem);
+    letter-spacing: -0.02em;
+}
+
+.agency-hero h1 span {
+    color: var(--gold-light);
+}
+
+.agency-block {
+    padding-top: 100px;
+    padding-bottom: 105px;
+}
+
+.agency-block-alt {
+    background: var(--cream-dark);
+}
+
+.agency-block .section-heading {
+    margin-bottom: 50px;
+}
+
+/* Mission et vision */
+
+.mv-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: var(--container);
+    margin: auto;
+}
+
+.mv-card {
+    padding: 42px 38px;
+    border: 1px solid var(--border);
+    background: var(--white);
+}
+
+.mv-card .eyebrow {
+    margin-bottom: 20px;
+    color: var(--gold-text);
+}
+
+.mv-lead {
+    margin-bottom: 20px;
+    color: var(--burgundy);
+    font-family: var(--font-title);
+    font-size: clamp(1.25rem, 2vw, 1.55rem);
+    line-height: 1.5;
+}
+
+.mv-card>p:last-child {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.9;
+}
+
+/* Domaines d'intervention */
+
+.agency-block .service-number {
+    display: block;
+    margin-bottom: 18px;
+    color: var(--gold-text);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.agency-block .service-card h3 {
+    font-size: 1.3rem;
+    line-height: 1.35;
+}
+
+/* Valeurs */
+
+.value-list {
+    max-width: var(--container);
+    margin: auto;
+    list-style: none;
+    border-top: 1px solid var(--border);
+}
+
+.value-item {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    align-items: baseline;
+    gap: clamp(20px, 6vw, 90px);
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.value-item h3 {
+    color: var(--burgundy);
+    font-size: 1.7rem;
+    font-style: italic;
+}
+
+.value-item p {
+    max-width: 560px;
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+/* Approche */
+
+.intro-text .pull-quote {
+    margin-top: 34px;
+    padding-left: 24px;
+    border-left: 2px solid var(--gold);
+    color: var(--burgundy);
+    font-family: var(--font-title);
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-style: italic;
+    line-height: 1.55;
+}
+
+.agency-cta .hero-actions .btn-light {
+    color: var(--burgundy-dark);
+}
+
+/* Menu : le bouton « menu » prend le relais plus tôt, car il y a cinq entrées */
+
+@media (min-width: 761px) and (max-width: 940px) {
+    .menu-toggle {
+        display: block;
+        position: relative;
+        z-index: 1002;
+    }
+
+    .menu-toggle[aria-expanded="true"] span:first-child {
+        transform: translateY(3px) rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"] span:last-child {
+        transform: translateY(-3px) rotate(-45deg);
+    }
+
+    .navigation {
+        position: absolute;
+        top: calc(100% - 1px);
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px var(--page-padding) 24px;
+        border-bottom: 1px solid var(--border);
+        background: var(--cream);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition:
+            opacity var(--transition),
+            visibility var(--transition),
+            transform var(--transition);
+    }
+
+    .navigation.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .navigation a {
+        padding: 14px 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .navigation a::after {
+        display: none;
+    }
+
+    .navigation .nav-cta {
+        margin-top: 15px;
+        padding: 12px 16px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .mv-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+    .agency-hero {
+        padding-top: 44px;
+        padding-bottom: 60px;
+    }
+
+    .agency-block {
+        padding-top: 70px;
+        padding-bottom: 72px;
+    }
+
+    .agency-block .section-heading {
+        margin-bottom: 36px;
+    }
+
+    .mv-card {
+        padding: 30px 24px;
+    }
+
+    .value-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 22px 0;
+    }
+}
+
+
+/* Carte flottante du portrait : monogramme de l'agence */
+
+.floating-logo {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    object-fit: cover;
+}
+
+
+/* =========================================
+   AGENCE : RESPONSIVE ALIGNÉ SUR LES AUTRES PAGES
+========================================= */
+
+/* Tablettes : mêmes colonnes que le reste du site */
+@media (max-width: 1050px) {
+    .services-grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .services-grid-3 .service-card:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+    }
+
+    .agency-hero {
+        padding-top: 52px;
+        padding-bottom: 68px;
+    }
+
+    .agency-logo {
+        width: min(420px, 70vw);
+    }
+
+    .agency-block {
+        padding-top: 80px;
+        padding-bottom: 84px;
+    }
+
+    .mv-card {
+        padding: 34px 30px;
+    }
+}
+
+/* Mobiles : une colonne, logo et titre plus compacts */
+@media (max-width: 760px) {
+    .services-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid-3 .service-card:last-child:nth-child(odd) {
+        grid-column: auto;
+    }
+
+    .agency-logo {
+        width: min(320px, 78vw);
+        margin-bottom: 22px;
+    }
+
+    .agency-hero h1 {
+        font-size: clamp(1.5rem, 6.4vw, 1.9rem);
+    }
+
+    .value-item h3 {
+        font-size: 1.45rem;
+    }
+}
+
+/* Très petits écrans (320 px) : l'en-tête ne doit jamais dépasser */
+@media (max-width: 400px) {
+    .header {
+        gap: 10px;
+    }
+
+    .logo {
+        min-width: 0;
+        gap: 10px;
+    }
+
+    .logo-text small {
+        font-size: 0.56rem;
+        letter-spacing: 0.16em;
+    }
+
+    .logo-text strong {
+        font-size: 0.95rem;
+    }
+}
